@@ -21,14 +21,15 @@ const Home = () => {
             <button className='btn'><img src= {play_icon} alt= "" />Watch Now</button>
             <button className='btn dark-btn'><img src= {info_icon} alt= "" />More Info</button>
           </div>
-          <TitleCards/>
         </div>
       </div>
+        <TitleCards title={"Popluar on Netflix"} category={"now_playing"}/>
       <div className="more-cards">
         <TitleCards title={"Blockbuster Movies"} category={"top_rated"}/>
-        <TitleCards title={"Recently Added"} category={"now_playing"}/>
-        <TitleCards title={"Top Picks for You"} category={"popular"}/>
-        <TitleCards title={"Coming Soon"} category={"upcoming"}/>
+        <TitleCards title={"Recently Added"} category={"upcoming"}/>
+        {/* <TitleCards title={"Top Picks for You"} category={"popular"}/> */}
+        {/* <TitleCards title={"Coming Soon"} category={"upcoming"}/> */}
+        {/* There are only 4 movie lists and two of them were the same at build time */}
       </div>
       <Footer/>
     </div>

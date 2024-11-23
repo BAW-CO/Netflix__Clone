@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './TitleCards.css'
-import cards_data from '../../assets/cards/Cards_data'
+import { Link } from 'react-router-dom'
 
 const TitleCards = ({title, category}) => {
 
@@ -17,7 +17,7 @@ const TitleCards = ({title, category}) => {
 
   const handleWheel = (event) => {
     event.preventDefault();
-    cardsRef.current.scrollLeft += event.deltaY;
+    cardsRef.current.scrollLeft += event.deltaX;
   }
 
   useEffect(() => {
@@ -41,13 +41,13 @@ const TitleCards = ({title, category}) => {
   
   return (
     <div className='title-cards'>
-      <h2>Popular on Netflix</h2>
-      <div className="card-list">
+      <h2>{title?title: "Popular on Netflix"}</h2>
+      <div className="card-list" ref = {cardsRef}>
         {apiData && apiData.map((movie) => (
-          <div className="card" key={movie.id}>
+          <Link to={`/player/${movie.id}`}className="card" key={movie.id}>
             <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt="" />
             <p>{movie.original_title}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

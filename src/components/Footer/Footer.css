@@ -1,6 +1,6 @@
 .footer{
     padding: 32px 4%;
-    max-width: 100px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -17,7 +17,7 @@
 
 .footer ul{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(3, 1fr); 
     gap: 16px;
     margin-bottom: none;
     list-style: none;
@@ -26,4 +26,5 @@
 .copyright-text{
     color: gray;
     font-size: 14px;
+    margin-top: 18px;
 }
