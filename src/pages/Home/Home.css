@@ -48,7 +48,7 @@
     font-size: 16px;
     background: rgb(182, 1, 1);
     border-radius: 12px;
-    cursor: pointer;
+    cursor: not-allowed;
 }
 
 .hero-btns .btn.dark-btn{
@@ -68,11 +68,47 @@
 }
 
 @media (max-width: 1024px){
-    .hero-caption .title-cards{
-        display: none;
-    }
     .hero-btns{
-        margin-bottom:30px;
+        margin-bottom:32px;
+    }
+}
+
+@media(max-width: 800px){
+    .hero-caption{
+        padding-left: 4%;
     }
 
+    .caption-img{
+        width: 40%;
+        margin-bottom: 12px;
+    }
+    
+    .hero-caption p{
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+    .hero-btns .btn img{
+        width: 20px;
+    }
+    
+}
+
+@media(max-width: 500px){
+    .caption-img{
+        display: none;
+    }
+
+    .hero-caption p{
+        font-size: 12px;
+        margin-bottom: 12px;
+        width: 60%;
+    }
+    .hero-btns .btn img{
+        width: 14px;
+    }
+    .hero-btns .btn{
+        padding: 4px 12px;
+        gap: 6px;
+        font-size: 12px;
+    }
 }

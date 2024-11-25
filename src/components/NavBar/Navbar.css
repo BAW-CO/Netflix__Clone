@@ -26,7 +26,7 @@
 }
 
 .navbar-left ul li {
-    cursor: pointer;
+    cursor: not-allowed;
 }
 
 
@@ -38,8 +38,14 @@
 
 .navbar-right .icons {
     width: 24px;
-    cursor: pointer;
+    cursor: not-allowed
 }
+  
+  .navbar-right p {
+    cursor: not-allowed;
+  }
+  
+  
 
 .navbar-right .profile {
     width: 32px;

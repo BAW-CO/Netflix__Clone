@@ -31,3 +31,35 @@
     text-decoration: none;
     color: white;
 }
+
+@media (max-width: 800px) {
+    .title-cards {
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    .title-cards h2 {
+        font-size: 16px;
+    }
+    .card-list img{
+        width: 200px;
+    }
+    .card-list .card p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    
+
+    .title-cards h2 {
+        font-size: 14px;
+    }
+    .card-list img{
+        width: 160px;
+    }
+    .card-list .card p {
+        font-size: 10px;
+    }
+}
+
